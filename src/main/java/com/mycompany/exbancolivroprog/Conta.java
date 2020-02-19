@@ -14,28 +14,44 @@ public class Conta {
     private float saldo;
     private Pessoa correntista;
     
-    Conta(int numero, float saldo, Pessoa correntista){
+    public Conta(int numero, float saldo, Pessoa correntista){
         this.numero = numero;
         this.saldo=saldo;
         this.correntista=correntista;
     }
     
-//    public float getSaldo() {
-//	return this.saldo;
-//    }
+    public int getNumero() {
+        return this.numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public float getSaldo() {
+        return this.saldo;
+    }
+
+    public Pessoa getCorrentista() {
+        return this.correntista;
+    }
+
+    public void setCorrentista(Pessoa correntista) {
+        this.correntista = correntista;
+    }
     
     void debitar(float valor){
-        if(saldo < valor){
+        if(getSaldo() < valor){
             System.out.println("Saldo insuficiente!");
-        }else{
-            saldo -= valor;
+        }else{  //OBS: não está assim no livro
+            saldo-=valor;
         }
     }
     void creditar(float valor){
-        saldo += valor;
+        saldo+=valor;
     }
     
     void apresentarDados(){
-        System.out.println("Conta nº: "+numero+", Saldo: "+saldo+", Correntista: "+correntista.apresentar());
+        System.out.println("Conta nº: "+getNumero()+", Saldo: "+getSaldo()+", Correntista: "+getCorrentista().apresentar());
     }
 }

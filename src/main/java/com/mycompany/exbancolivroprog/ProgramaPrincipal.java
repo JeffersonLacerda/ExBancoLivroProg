@@ -29,10 +29,10 @@ public class ProgramaPrincipal {
         contaJefferson.debitar(100);
         contaJefferson.creditar(70);
         
-        System.out.println("Nome do Correntista da conta: "+contaJefferson.numero);
-        System.out.println(contaJefferson.correntista.nome);
-        System.out.println("A rua do correntista da conta: "+contaJefferson.numero);
-        System.out.println(contaJefferson.correntista.endResidencial.rua);
+        System.out.println("Nome do Correntista da conta: "+contaJefferson.getNumero());
+        System.out.println(contaJefferson.getCorrentista().getNome());
+        System.out.println("A rua do correntista da conta: "+contaJefferson.getNumero());
+        System.out.println(contaJefferson.getCorrentista().getEndResidencial().getRua());
         System.out.println("----------------------------------");
         contaJefferson.apresentarDados();        
               

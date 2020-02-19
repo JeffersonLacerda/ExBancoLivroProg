@@ -27,7 +27,7 @@ public class BancoContas {
         boolean achou = false;
         int i=0;
         while((!achou)&&(i<indice)){
-            n=contas[i].numero;
+            n=contas[i].getNumero();
             if(n==numero){
                 achou=true;
             }else{
@@ -40,7 +40,7 @@ public class BancoContas {
     /*Neste método, primeiro utiliza-se getIndice, passando o número da conta que se quer inserir no Banco. Como dito anteriormente, 
     se o retorno for igual ao atributo indice significa que não há nenhuma conta com este número e com isso, a conta pode ser inserida*/
     void inserir (Conta conta){
-        int i = getIndice(conta.numero);
+        int i = getIndice(conta.getNumero());
         if(i==indice){ //Se o  índice - que é o valor que pode ser inserido um elemento - é igual ao i - que é o fim da busca no método.
             contas[indice]=conta;
             indice = indice+1;
@@ -52,7 +52,7 @@ public class BancoContas {
     
     /*Permite que uma conta tenha seus valores atualizados*/
     void atualizar (Conta conta){
-        int i = getIndice(conta.numero);
+        int i = getIndice(conta.getNumero());
         if (i == indice) { //Se chegou ao final do vetor na busca do método getIndice e não encontrou...
             System.out.println("Conta inexistente");
         } else {

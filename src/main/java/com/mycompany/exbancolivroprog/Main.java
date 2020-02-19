@@ -55,28 +55,29 @@ public class Main {
                         sexo = 'F';
                     }
                     // Atalho para entrada dos Endereços
-                    Endereco end1 = new Endereco();
-                    end1.rua = "Agamenon Magalhães";
-                    end1.numero = "11";
-                    end1.bairro = "Boa Vista";
-                    end1.cidade = "Recife";
-                    end1.estado = "Pernambuco";
-                    end1.cep = "69872-980";
-                    Endereco end2 = new Endereco();
-                    end2.rua = "Av. Boa Viagem";
-                    end2.numero = "323";
-                    end2.bairro = "Boa Viagem";
-                    end2.cidade = "Recife";
-                    end2.estado = "Pernambuco";
-                    end2.cep = "64321-242";
-                    Pessoa pessoa = new Pessoa();
-                    pessoa.nome = nome; pessoa.cpf = cpf; pessoa.sexo = sexo;
-                    pessoa.endResidencial = end1;
-                    pessoa.endComercial = end2;
-                    Conta conta = new Conta();
-                    conta.numero = numero;
-                    conta.saldo = saldo;
-                    conta.pessoa = pessoa; //Não está funcionando (diferente do livro)
+                    Endereco end1 = new Endereco("Agamenon Magalhães","11","Boa Vista", "Recife","Pernambuco","69872-980");
+//Tinha adicionado pelo atributo, agora, com o que fiz acima, adiciono pelo construtor...
+//                    end1.rua = "Agamenon Magalhães";
+//                    end1.numero = "11";
+//                    end1.bairro = "Boa Vista";
+//                    end1.cidade = "Recife";
+//                    end1.estado = "Pernambuco";
+//                    end1.cep = "69872-980";
+                    Endereco end2 = new Endereco("Av. Boa Viagem","323","Boa Viagem","Recife","Pernambuco","64321-242");
+//                    end2.rua = "Av. Boa Viagem";
+//                    end2.numero = "323";
+//                    end2.bairro = "Boa Viagem";
+//                    end2.cidade = "Recife";
+//                    end2.estado = "Pernambuco";
+//                    end2.cep = "64321-242";
+                    Pessoa pessoa = new Pessoa(nome,cpf,sexo,end1,end2);
+//                    pessoa.nome = nome; pessoa.cpf = cpf; pessoa.sexo = sexo;
+//                    pessoa.endResidencial = end1;
+//                    pessoa.endComercial = end2;
+                    Conta conta = new Conta(numero,saldo,pessoa);
+//                    conta.numero = numero;
+//                    conta.saldo = saldo;
+//                    conta.pessoa = pessoa; //Não está funcionando (diferente do livro)
                     banco.inserir(conta);
                     break;
                 case 2:
