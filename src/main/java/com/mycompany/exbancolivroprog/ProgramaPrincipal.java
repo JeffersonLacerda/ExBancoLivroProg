@@ -18,11 +18,13 @@ public class ProgramaPrincipal {
         
 //------------------ Exemplos de Prog.II Vol. 1 e 2
       
-        //Criando um endereço
-        Endereco endRes = new Endereco("Vidal de Negreiros","21","São Sebastião","Pesqueira","Pernambuco","55200-000");
+        //Criando endereços
+        Endereco end1 = new Endereco("Vidal de Negreiros","21","São Sebastião","Pesqueira","Pernambuco","55200-000");
+        Endereco end2 = new Endereco("Vidal de Negreiros","21","São Sebastião","Pesqueira","Pernambuco","55200-000");
         
-        //Criando a pessoa e adicionando dados - inclusive os endereços (obs: o residencial foi incluído nos 2)
-        Pessoa jefferson = new Pessoa("Jefferson Vasconcelos","999.888.777-00",'M', endRes, endRes);
+        //Criando a pessoa e adicionando dados - inclusive os endereços
+        Pessoa jefferson = new Pessoa("Jefferson Vasconcelos","999999999-00",'M', end1, end2);
+        Pessoa andreia = new Pessoa("Andreia","111111111-00",'F', end1, end2);
         
         //Criando uma conta e atribuindo um proprietário para ela
         Conta contaJefferson = new Conta(1,500,jefferson);

@@ -14,6 +14,12 @@ public class Conta {
     private float saldo;
     private Pessoa correntista;
     
+    private static int contadorContas;
+    
+    public static int getNumeroContas(){
+        return contadorContas;
+    }
+    
     public Conta(int numero, float saldo, Pessoa correntista){
         this.numero = numero;
         this.saldo=saldo;
