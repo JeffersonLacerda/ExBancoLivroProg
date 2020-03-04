@@ -24,20 +24,22 @@ public class ProgramaPrincipal {
         
         //Criando a pessoa e adicionando dados - inclusive os endereços
         Pessoa jefferson = new Pessoa("Jefferson Vasconcelos","999999999-00",'M', end1, end2);
-        Pessoa andreia = new Pessoa("Andreia","111111111-00",'F', end1, end2);
+        Pessoa andreia = new Pessoa("Andreia","111111111-00",'F', end2);
         
         //Criando uma conta e atribuindo um proprietário para ela
         Conta contaJefferson = new Conta(1,500,jefferson);
         contaJefferson.debitar(100);
-        contaJefferson.creditar(70);
+        contaJefferson.creditar(70);        
+        Conta contaAndreia = new Conta(2,andreia);
         
-        System.out.println("Nome do Correntista da conta: "+contaJefferson.getNumero());
-        System.out.println(contaJefferson.getCorrentista().getNome());
-        System.out.println("A rua do correntista da conta: "+contaJefferson.getNumero());
-        System.out.println(contaJefferson.getCorrentista().getEndResidencial().getRua());
-        System.out.println("----------------------------------");
+        //Apresentando os dados de uma pessoa
+//        System.out.println("Nome do Correntista da conta: "+contaJefferson.getNumero());
+//        System.out.println(contaJefferson.getCorrentista().getNome());
+//        System.out.println("A rua do correntista da conta: "+contaJefferson.getNumero());
+//        System.out.println(contaJefferson.getCorrentista().getEndResidencial().getRua());
+//        System.out.println("----------------------------------");
         contaJefferson.apresentarDados();        
-              
+        contaAndreia.apresentarDados();       
     }
     
 }

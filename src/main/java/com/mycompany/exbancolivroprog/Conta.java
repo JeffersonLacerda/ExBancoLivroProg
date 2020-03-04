@@ -26,6 +26,12 @@ public class Conta {
         this.correntista=correntista;
     }
     
+        public Conta(int numero, Pessoa correntista){
+        this.numero = numero;
+        this.saldo=0.0F;
+        this.correntista=correntista;
+    }
+    
     public int getNumero() {
         return this.numero;
     }

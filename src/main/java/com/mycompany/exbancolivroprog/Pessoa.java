@@ -16,14 +16,23 @@ public class Pessoa {
     private Endereco endResidencial;
     private Endereco endComercial;
     
-    public Pessoa(String nome, String cpf, char sexo, Endereco endRes, Endereco endCom){
-        this.nome =nome;
-        this.cpf = cpf;
+    public Pessoa(String nome, String cpf, char sexo, Endereco endResidencial, Endereco endComercial){
+        this.nome=nome;
+        this.cpf=cpf;
         this.sexo=sexo;
-        endResidencial=endRes;
-        endComercial=endCom;
+        this.endResidencial=endResidencial;
+        this.endComercial=endComercial;
     }
         
+    public Pessoa(String nome, String cpf, char sexo, Endereco endResidencial){
+        this.nome=nome;
+        this.cpf=cpf;
+        this.sexo=sexo;
+        this.endResidencial=endResidencial;
+        this.endComercial=endResidencial;
+    }
+    
+    
     public String getNome() {
         return nome;
     }
