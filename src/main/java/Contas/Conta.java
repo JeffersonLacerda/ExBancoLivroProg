@@ -1,4 +1,6 @@
-package com.mycompany.exbancolivroprog;
+package Contas;
+
+import Pessoas.Pessoa;
 
 /**
  * Classe que representa uma conta bancária
@@ -66,7 +68,7 @@ public class Conta {
 
 /** Método que diminui o valor do saldo de uma conta. O valor não pode ser maior que o saldo da conta.
 * @param valor quantia a ser debitado da conta*/
-    void debitar(float valor){
+    public void debitar(float valor){
         if(saldo < valor){
             System.out.println("Saldo insuficiente!");
         }else{  //OBS: não está assim no livro
@@ -76,12 +78,12 @@ public class Conta {
     
 /** Método que credita um valor no saldo de uma conta.
 * @param valor quantia a ser creditada na conta */    
-    void creditar(float valor){
+    public void creditar(float valor){
         saldo+=valor;
     }
 
 //Método que apresenta os dados de uma conta   
-    void apresentarDados(){
+    public void apresentarDados(){
         System.out.println("Conta nº: "+numero+", Saldo: "+saldo+", Correntista: "+correntista.apresentar());
     }
 }

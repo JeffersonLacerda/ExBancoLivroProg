@@ -5,6 +5,10 @@
  */
 package com.mycompany.exbancolivroprog;
 
+import Pessoas.Endereco;
+import Pessoas.Pessoa;
+import Contas.Conta;
+
 /**
  *
  * @author Jefferson
